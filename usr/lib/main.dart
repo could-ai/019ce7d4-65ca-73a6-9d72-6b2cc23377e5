@@ -312,6 +312,7 @@ class _GameScreenState extends State<GameScreen> with SingleTickerProviderStateM
                     particles: particles,
                     dragMultiplier: dragMultiplier,
                     gravity: gravity,
+                    birdsLeft: birdsLeft, // Added missing parameter
                   ),
                 ),
                 
@@ -456,6 +457,7 @@ class GamePainter extends CustomPainter {
   final List<Particle> particles;
   final double dragMultiplier;
   final double gravity;
+  final int birdsLeft; // Added missing parameter
 
   GamePainter({
     required this.logicalSize,
@@ -469,6 +471,7 @@ class GamePainter extends CustomPainter {
     required this.particles,
     required this.dragMultiplier,
     required this.gravity,
+    required this.birdsLeft, // Added missing parameter
   });
 
   @override
